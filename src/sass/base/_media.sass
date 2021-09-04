@@ -1,0 +1,85 @@
+@media screen and (min-width: 920px)
+    .menu
+        &__language
+            &--item
+                transition: all .2s
+            &--item:hover 
+                color: $primary
+        &__social
+            &--item
+                transition: all .2s
+            &--item:hover 
+                background-color: $primary
+                border: 1px solid transparent
+            &--item:hover svg
+                fill: $white
+@media screen and (max-width: 920px)
+    .menu
+        &__social
+            display: none
+    .mobile
+        &__menu
+            display: flex
+            align-items: center
+            justify-content: center
+@media screen and (max-width: 620px)
+    .menu
+        &__logo
+            max-width: 200px
+        &__language
+            margin-right: 0
+            order: 2
+    .logo
+        &__link
+            height: 30px
+            margin: auto
+    .button
+        &__subscribe
+            position: fixed
+            top: 50%
+            right: 0
+            display: flex
+            align-items: center
+            width: 0
+            padding:  10px 15px
+            transform: translateY(-50%)
+            border-radius: 100px 0 0 100px
+            background-color: $primary
+            transition: all 0.2s
+            color: $white
+            &--active
+                width: 135px
+            &--line
+                position: fixed
+                top: 50%
+                right: 0
+                display: block
+                padding: 10px 15px
+                font-weight: bold
+                transform: translateY(-50%)
+                background-color: $primary
+                border-radius: 100px 0 0 100px
+                z-index: 999
+                cursor: pointer
+                &::before
+                    content: ''
+                    position: absolute
+                    top: 9px
+                    left: 12px
+                    width: 18px
+                    height: 18px
+                    background-color: $white
+                    border-radius: 100px
+                    z-index: -1
+@media screen and (max-width: 420px)
+    .menu
+        &__language
+            span
+                margin: 0 5px
+@media screen and (max-width: 375px)
+    .menu
+        &__logo
+            max-width: 150px
+    .logo
+        &__link
+            height: 20px
